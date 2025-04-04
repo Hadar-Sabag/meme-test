@@ -1,0 +1,73 @@
+.editor {
+    gap: 80px;
+}
+
+.editor-container {
+    border-radius: 30px;
+    width: 80%;
+    max-width: 550px;
+    height: 550px;
+    background-color: #a6a9ad13;
+    justify-items: center;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.txt-input input {
+    font-family: poppins-medium;
+    font-size: 2em;
+    width: 100%;
+    max-width: 450px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.line-navigate button {
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+}
+
+.line-opratore button {
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    font-size: 2em;
+    font-family: poppins-semi-bold;
+    text-align: center;
+}
+
+.color-btn {
+    position: relative;
+}
+
+.color-txt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.actions {
+    display: flex;
+}
+
+.actions a {
+    text-decoration: none;
+    width: 150px;
+    height: 40px;
+    display: block;
+    background-color: white;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 40px;
+    font-family: poppins-medium;
+    font-size: 1.25em;
+    color: black;
+    margin: 3px;
+}

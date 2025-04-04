@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/2ed29c6dba.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <title>Meme Better</title>
+</head>
+
+<body onload="onInit()" class="main-layout">
+
+    <div class="main-screen" onclick="toggleMenu()"></div>
+
+    <header class="main-header">
+        <section>
+            <nav class="main-nav">
+                <div class="logo">Meme Better</div>
+                <ul class="list">
+                    <li><a onclick="onSwichPage()" href="#">Gallery</a></li>
+                    <li><a onclick="onSwichPage()" href="#">Saved</a></li>
+                </ul>
+                <!-- hamburger menu -->
+                <button class="btn-toggle-menu" onclick="toggleMenu()">
+                    <div class="hamburger-lines">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </div>
+                </button>
+            </nav>
+        </section>
+    </header>
+
+    <main class="main-container main-layout">
+
+        <section class="gallery">
+            <input type="text" placeholder="Search...">
+            <div class="pic-gallery"></div>
+        </section>
+
+        <section class="meme"></section>
+
+        <section class="editor flex justify-content align-center hidden ">
+
+            <article class="canvas-container">
+                <canvas width="550" height="550" onclick="onSelectLine(event)">
+                </canvas>
+            </article>
+
+            <article class="editor-container grid align-center ">
+                <div class="txt-input">
+                    <input type="text" oninput="onSetline(this.value)" value="Add Text Here">
+                </div>
+
+                <div class="line-navigate">
+                    <button class="switch-txt" onclick="onSwitchLine()"><i
+                            class="fa-solid fa-arrow-down-up-across-line fa-2xl"></i></button>
+                    <button class="add-txt" onclick="onAddLine()"><i class="fa-solid fa-plus fa-2xl"></i></button>
+                    <button class="delete-txt" onclick=""><i class="fa-solid fa-trash fa-2xl"></i></button>
+                </div>
+
+                <div class="line-opratore">
+                    <button class="increase-txt" onclick="onSetFontSize(this)">A+</button>
+                    <button class="decrease-txt" onclick="onSetFontSize(this)">A-</button>
+                    <button class="color-btn">
+                        <i class="fa-solid fa-brush"></i>
+                        <input id="colorPicker" class="color-txt" type="color" onchange="onSetColor(this.value)">
+                    </button>
+
+                </div>
+
+                <div class="actions">
+                    <a href="#"><i class="fa-solid fa-floppy-disk"></i> save</a>
+                    <a href="#"><i class="fa-solid fa-share-nodes"></i> share</a>
+                    <a href="#" class="btn" onclick="onDownloadImg(this)" download="my-img.jpg">
+                        <i class="fa-solid fa-download"></i> Download</a>
+                </div>
+
+            </article>
+
+        </section>
+    </main>
+
+    <script src="js/services/utils.js"></script>
+    <script src="js/services/storage.js"></script>
+    <script src="js/services/meme.service.js"></script>
+    <script src="js/controllers/gallery.controller.js"></script>
+    <script src="js/controllers/meme.controller.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

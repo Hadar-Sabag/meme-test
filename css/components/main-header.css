@@ -1,0 +1,84 @@
+.main-header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: var(--clr-secondary-1);
+    height: 70px;
+    margin-bottom: 20px;
+    font-family: poppins-medium;
+    font-size: 1.25em;
+    color: white;
+    border-radius: 50px;
+
+    display: grid;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.list {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin-inline-end: 20px;
+}
+
+.main-nav li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    color: white;
+    position: relative;
+}
+
+.logo {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    margin-inline-start: 20px;
+}
+
+.main-header .btn-toggle-menu {
+    background-color: inherit;
+    border: 0;
+    cursor: pointer;
+    margin: 20px;
+}
+
+/* hamburger menu */
+
+.main-header .btn-toggle-menu .hamburger-lines {
+    height: 26px;
+    width: 32px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-header .btn-toggle-menu .hamburger-lines .line {
+    height: 4px;
+    width: 100%;
+    background-color: aliceblue;
+    transition: 0.4s;
+}
+
+
+body.menu-open .btn-toggle-menu .hamburger-lines .line.line1 {
+    rotate: -45deg;
+    transform-origin: top right;
+}
+
+body.menu-open .btn-toggle-menu .hamburger-lines .line.line2 {
+    scale: 0;
+}
+
+body.menu-open .btn-toggle-menu .hamburger-lines .line.line3 {
+    rotate: 45deg;
+    transform-origin: bottom right;
+}
